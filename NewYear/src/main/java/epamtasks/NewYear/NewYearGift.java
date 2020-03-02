@@ -21,7 +21,7 @@ public class NewYearGift{
         List<Sweets> choco = new ArrayList<>();
         float totalWeight = 0;
         for(Sweets s: ls)
-            totalWeight+=s.weight;
+            totalWeight+=s.Weight;
         System.out.println("\nTotal Weight of the Gift is : "+totalWeight);
         for(Sweets s: ls){
             if(s instanceof chocos)
@@ -36,7 +36,7 @@ public class NewYearGift{
         else Collections.sort(choco,new sortBySweetContent());
         System.out.println("Chocolates Present in the Gift are:");
 		for(Sweets s:choco){
-			System.out.println(s.name+" "+s.cost+" "+s.weight+" "+s.sweetContent);
+			System.out.println(s.Name+" "+s.Cost+" "+s.Weight+" "+s.SweetContent);
 		}
 		System.out.println("Do you Want List of Candies(y/n)");
 		char c=sc.next().charAt(0);
@@ -48,24 +48,24 @@ public class NewYearGift{
 			int max=sc.nextInt();
 			if(op==1) {
 				for(Sweets cur:ls) {
-					if(cur instanceof Candy && cur.cost>=min && cur.cost<=max){
-						System.out.println(cur.name+" "+cur.cost+" "+cur.weight+" "+cur.sweetContent);
+					if(cur instanceof Candy && cur.Cost>=min && cur.Cost<=max){
+						System.out.println(cur.Name+" "+cur.Cost+" "+cur.Weight+" "+cur.SweetContent);
 					}
 				}
 			}
 			else if(op==2) {
 				for(Sweets cur:ls) {
 					
-					if(cur instanceof Candy && cur.weight>=min && cur.weight<=max){
-						System.out.println(cur.name+" "+cur.cost+" "+cur.weight+" "+cur.sweetContent);
+					if(cur instanceof Candy && cur.Weight>=min && cur.Weight<=max){
+						System.out.println(cur.Name+" "+cur.Cost+" "+cur.Weight+" "+cur.SweetContent);
 					}
 				}
 			}
 			else {
 				for(Sweets cur:ls) {
 					
-					if(cur instanceof Candy && cur.sweetContent>=min && cur.sweetContent<=max){
-						System.out.println(cur.name+" "+cur.cost+" "+cur.weight+" "+cur.sweetContent);
+					if(cur instanceof Candy && cur.SweetContent>=min && cur.SweetContent<=max){
+						System.out.println(cur.Name+" "+cur.Cost+" "+cur.Weight+" "+cur.SweetContent);
 					}
 				}
 			}

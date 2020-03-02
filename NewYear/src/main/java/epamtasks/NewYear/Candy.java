@@ -1,7 +1,7 @@
 package epamtasks.NewYear;
 
 public class Candy extends Sweets{
-    Candy(String name,int cost,float weight,int sweetcontent){
-        super(name,cost,weight,sweetcontent);
+    Candy(String Name,int Cost,float Weight,int Sweetcontent){
+        super(Name,Cost,Weight,Sweetcontent);
     }
 }
